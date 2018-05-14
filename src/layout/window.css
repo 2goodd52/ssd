@@ -1,0 +1,80 @@
+.left_split_border_pane {
+
+    -fx-padding: 3px;
+
+}
+
+.split-pane *.split-pane-divider {
+
+    -fx-padding: 0 1 0 1;
+
+}
+
+.split-pane {
+
+    -fx-resizable: false;
+
+}
+
+.navigation_grid {
+
+    -fx-padding: 3px;
+    -fx-vgap: 3px;
+
+}
+
+.navigation_button {
+
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-background-color: skyblue;
+    -fx-border-color: black;
+    -fx-max-width: infinity;
+    -fx-max-height: infinity;
+    -fx-background-insets: 1px;
+    -fx-border-insets: 1px;
+
+}
+
+.navigation_button:selected {
+
+    -fx-background-color: rgb(108, 164, 200);
+
+}
+
+.navigation_button:hover {
+
+    -fx-background-color: rgb(121, 185, 225);
+
+}
+
+.user_grid {
+
+    -fx-vgap: 5px;
+    -fx-padding: 3px 3px 5px 3px;
+
+}
+
+.user_label {
+
+    -fx-font-weight: bold;
+}
+
+.user_grid_button {
+
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-background-color: skyblue;
+    -fx-border-color: black;
+    -fx-max-width: infinity;
+    -fx-max-height: infinity;
+    -fx-background-insets: 1px;
+    -fx-border-insets: 1px;
+
+}
+
+.user_grid_button:hover {
+
+    -fx-background-color: rgb(121, 185, 225);
+
+}

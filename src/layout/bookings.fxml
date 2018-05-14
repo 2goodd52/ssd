@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="contentPane" prefHeight="698.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.controller.bookings.BookingController">
+   <children>
+      <Label layoutX="391.0" layoutY="13.0" prefHeight="53.0" prefWidth="117.0" text="Bookings" textAlignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="bookingTable" layoutX="14.0" layoutY="112.0" prefHeight="534.0" prefWidth="847.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="51.0" text="ID" />
+            <TableColumn fx:id="userColumn" prefWidth="136.0" text="User" />
+          <TableColumn fx:id="platformColumn" prefWidth="150.0" text="Platform" />
+            <TableColumn fx:id="softwareColumn" minWidth="0.0" prefWidth="158.0" text="Software" />
+            <TableColumn fx:id="dateColumn" prefWidth="179.0" text="Date" />
+            <TableColumn fx:id="durationColumn" prefWidth="91.0" text="Duration" />
+            <TableColumn fx:id="priceColumn" prefWidth="81.0" text="Price" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="13.0" layoutY="646.0" prefHeight="53.0" prefWidth="847.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addBooking" text="Create New Booking" />
+            <Pane prefHeight="53.0" prefWidth="373.0" />
+            <Button mnemonicParsing="false" onAction="#editBooking" text="Edit Selected Booking" />
+            <Button mnemonicParsing="false" onAction="#deleteBooking" text="Delete Selected Booking" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="81.0" prefHeight="25.0" prefWidth="435.0" spacing="10.0">
+         <children>
+            <Label text="Search:" />
+            <TextField />
+            <ComboBox prefWidth="150.0" value="User">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="User" />
+                        <String fx:value="Platform" />
+                        <String fx:value="Software" />
+                        <String fx:value="Date" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import org.view.component.*?>
+
+<AnchorPane id="AnchorPane" fx:id="contentPane" prefHeight="698.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.controller.bookings.EditBookingController">
+   <children>
+      <Label alignment="CENTER" layoutX="334.0" layoutY="81.0" prefHeight="53.0" prefWidth="227.0" text="Edit Booking" textAlignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="230.0" layoutY="214.0" prefHeight="17.0" prefWidth="149.0" text="User:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="230.0" layoutY="249.0" prefHeight="17.0" prefWidth="149.0" text="Platform:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="230.0" layoutY="319.0" prefHeight="17.0" prefWidth="149.0" text="Date:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="230.0" layoutY="284.0" prefHeight="17.0" prefWidth="149.0" text="Game:" textAlignment="RIGHT" />
+      <Label alignment="CENTER_RIGHT" layoutX="230.0" layoutY="354.0" prefHeight="17.0" prefWidth="149.0" text="Time (HH:MM):" textAlignment="RIGHT" />
+      <Button layoutX="474.0" layoutY="436.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="61.0" text="Cancel" />
+      <Button layoutX="386.0" layoutY="436.0" mnemonicParsing="false" onAction="#saveBooking" prefHeight="25.0" prefWidth="61.0" text="Save" />
+      <ComboBox fx:id="platformInput" layoutX="385.0" layoutY="245.0" prefWidth="150.0" />
+      <ComboBox fx:id="gameInput" layoutX="385.0" layoutY="280.0" prefWidth="150.0" />
+      <ComboBox fx:id="userInput" layoutX="385.0" layoutY="210.0" prefWidth="150.0" />
+      <DatePicker fx:id="dateInput" layoutX="387.0" layoutY="315.0" prefHeight="25.0" prefWidth="149.0" />
+      <TimeSpinner fx:id="timeInput" layoutX="387.0" layoutY="350.0" />
+      <TextField fx:id="durationInput" layoutX="387.0" layoutY="385.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="230.0" layoutY="389.0" prefHeight="17.0" prefWidth="149.0" text="Duration (hours):" textAlignment="RIGHT" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="contentPane" prefHeight="698.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.controller.software.SoftwareController">
+   <children>
+      <Label layoutX="393.0" layoutY="14.0" prefHeight="53.0" prefWidth="87.0" text="Games" textAlignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="gameTable" layoutX="14.0" layoutY="116.0" prefHeight="530.0" prefWidth="847.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="51.0" text="ID" />
+          <TableColumn fx:id="nameColumn" prefWidth="267.0" text="Name" />
+            <TableColumn fx:id="categoryColumn" minWidth="0.0" prefWidth="126.0" text="Category" />
+            <TableColumn fx:id="platformColumn" prefWidth="220.0" text="Platform" />
+            <TableColumn fx:id="playersColumn" prefWidth="94.0" text="Players" />
+            <TableColumn fx:id="ageColumn" prefWidth="88.0" text="Age" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="13.0" layoutY="646.0" prefHeight="53.0" prefWidth="847.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addGame" text="Add New Game" />
+            <Pane prefHeight="53.0" prefWidth="415.0" />
+            <Button mnemonicParsing="false" onAction="#editGame" text="Edit Selected Game" />
+            <Button mnemonicParsing="false" onAction="#deleteGame" text="Delete Selected Game" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="84.0" prefHeight="25.0" prefWidth="435.0" spacing="10.0">
+         <children>
+            <Label text="Search:" />
+            <TextField />
+            <ComboBox prefWidth="150.0" value="Name">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Name" />
+                        <String fx:value="Category" />
+                        <String fx:value="Platform" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

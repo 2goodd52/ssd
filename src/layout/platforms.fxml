@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="contentPane" prefHeight="698.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.controller.platforms.PlatformController">
+   <children>
+      <Label layoutX="374.0" layoutY="14.0" prefHeight="53.0" prefWidth="126.0" text="Platforms" textAlignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <TitledPane animated="false" layoutX="14.0" layoutY="67.0" prefHeight="302.0" prefWidth="849.0" text="Platforms">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="266.0" prefWidth="847.0">
+               <children>
+                  <HBox alignment="CENTER" layoutY="229.0" prefHeight="40.0" prefWidth="841.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addPlatform" text="Create New Platform" />
+                        <Pane prefHeight="40.0" prefWidth="330.0" />
+                        <Button mnemonicParsing="false" onAction="#editPlatform" text="Edit Selected Platform" />
+                        <Button mnemonicParsing="false" onAction="#deletePlatform" text="Delete Selected Platform" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="platformTable" prefHeight="230.0" prefWidth="847.0">
+                    <columns>
+                      <TableColumn fx:id="idColumnPlatform" prefWidth="42.0" text="ID" />
+                      <TableColumn fx:id="nameColumnPlatform" prefWidth="192.0" text="Name" />
+                        <TableColumn fx:id="typeColumnPlatform" prefWidth="184.0" text="Platform Type" />
+                        <TableColumn fx:id="componentsColumnPlatform" minWidth="6.0" prefWidth="427.0" text="Hardware Components" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="14.0" layoutY="382.0" prefHeight="302.0" prefWidth="849.0" text="Hardware Components">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="266.0" prefWidth="847.0">
+               <children>
+                  <HBox alignment="CENTER" layoutY="229.0" prefHeight="40.0" prefWidth="841.0" spacing="20.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addComponent" text="Add New Component" />
+                        <Pane prefHeight="40.0" prefWidth="280.0" />
+                        <Button mnemonicParsing="false" onAction="#editComponent" text="Edit Selected Component" />
+                        <Button mnemonicParsing="false" onAction="#deleteComponent" text="Delete Selected Component" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="hardwareTable" prefHeight="230.0" prefWidth="847.0">
+                     <columns>
+                        <TableColumn fx:id="idColumnHardware" prefWidth="42.0" text="ID" />
+                        <TableColumn fx:id="nameColumnHardware" prefWidth="168.0" text="Name" />
+                        <TableColumn fx:id="descriptionColumnHardware" minWidth="6.0" prefWidth="632.0" text="Description" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
